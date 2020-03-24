@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Ugly Webby</title>
+        <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
         <link rel="stylesheet" href="style.css" type="text/css">
     </head>
     <body>
@@ -17,16 +18,16 @@
       </div>
 
         <hr>
-        <div>
+        <div class="alert alert-primary" role="alert">
           <p>Notifications: 4</p>
         </div>
 
         <hr>
 
-        <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Source</a></li>
+        <ul class="breadcrumb">
+          <li class="breadcrumb-item active"><a href="">Home</a></li>
+          <li class="breadcrumb-item active"><a href="">About</a></li>
+          <li class="breadcrumb-item active"><a href="">Source</a></li>
         </ul>
 
         <hr>
@@ -43,55 +44,119 @@
 
             <h3>Some arguments.</h3>
             
-            <ul>
-                <li>This is an argument.</li>
-                <li>This is a counterpoint!</li>
-                <li>But holy $#!%, <strong>this</strong> argument blows the other arguments away.</li>
-                <li>The first two arguments are now disproven af.</li>
+            <ul class="list-group">
+                <li class="list-group-item">This is an argument.</li>
+                <li class="list-group-item">This is a counterpoint!</li>
+                <li class="list-group-item">But holy $#!%, <strong>this</strong> argument blows the other arguments away.</li>
+                <li class="list-group-item">The first two arguments are now disproven af.</li>
             </ul>
         </div>
         <div>
             <h3>How many things are there?</h3>
-            <ol>
-                <li>Thing 1.</li>
-                <li>Thing 2.</li>
-                <li>Thing C.</li>
-                <li>Thing 4th, the 4th thing.</li>
-                <li>Thing 1 again.</li>
+            <ol class="list-group">
+                <li class="list-group-item list-group-item-primary">Thing 1.</li>
+                <li class="list-group-item list-group-item-success">Thing 2.</li>
+                <li class="list-group-item list-group-item-danger">Thing C.</li>
+                <li class="list-group-item list-group-item-warning">Thing 4th, the 4th thing.</li>
+                <li class="list-group-item list-group-item-info">Thing 1 again.</li>
             </ol>
         </div>
 
         <hr>
 
-        <div>
-          <h3>Triceratops</h3>
-          <img src="assets/triceratops.jpg">
-          Triceratops had... horns, I guess?
-        </div>
-        <div>
+       
+        <!-- <div id="dinoImages" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="assets/triceratops.jpg" alt = "First slide">
+                <div class="carousel-caption d-none d-md-block">
+                  <h3>Triceratops</h3>
+                  <p>Triceratops had... horns, I guess?</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="assets/t-rex.jpg" alt = "Second slide">
+                <div class="carousel-caption d-none d-md-block">
+                  <h3>T-Rex</h3>
+                  <p>He was the king!</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="assets/stegosaur.jpg" alt = "Third slide">
+                <div class="carousel-caption d-none d-md-block">
+                  <h3>Stegosaur</h3>
+                  <p>Spikes and plates but not a predator so don't worry.</p>
+                </div>
+            </div>
+          </div>
+        <p>
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#tri" aria-expanded="false" aria-controls="tri">
+            Triceratops
+          </button>
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#rex" aria-expanded="false" aria-controls="rex">
+            T-Rex
+          </button>
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#steg" aria-expanded="false" aria-controls="steg">
+            Stegosaur
+          </button>
+        </p>
+        <div class="collapse" id="tri">
+          <div class="card card-body">
+            <!-- <img src="assets/triceratops.jpg"> -->
+            <!-- Triceratops had... horns, I guess?
+          </div>
+        </div> -->
+        <!-- <div class="collapse" id="rex">
           <h3>T-Rex</h3>
           <img src="assets/t-rex.jpg">
           He was the king!
         </div>
-        <div>
+        <div class="collapse" id="steg">
           <h3>Stegosaur</h3>
           <img src="assets/stegosaur.jpg">
           Spikes and plates but not a predator so don't worry.
+        </div> -->
+        <div class="card" style="width: 18rem;">
+          <img src="assets/triceratops.jpg" class="card-img-top" alt = "First image">
+          <div class="card-body">
+              <h3 class="card-title">Triceratops</h3>
+              <p class="card-text">Triceratops had... horns, I guess?</p>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img src="assets/t-rex.jpg" class="card-img-top" alt = "First image">
+          <div class="card-body">
+              <h3 class="card-title">T-Rex</h3>
+              <p class="card-text">He was the king!</p>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img src="assets/stegosaur.jpg" class="card-img-top" alt = "First image">
+          <div class="card-body">
+              <h3 class="card-title">Stegosaur</h3>
+              <p class="card-text">Spikes and plates but not a predator so don't worry.</p>
+          </div>
         </div>
 
         <hr>
-
         <form>
-            <input type="text">
-            <input type="text">
-            <textarea>Someday we'll make forms that do something.</textarea>
-            <label for="drop-down">Is today that day?</label>
-            <select name="drop-down" id="drop-down">
-              <option value="maybe-tomorrow">Maybe tomorrow?</option>
-              <option value="no" selected>No.</option>
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Email address</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1"></label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">Someday we'll make forms that do something! </textarea>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Is that today?</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+              <option>yes</option>
+              <option>no</option>
             </select>
-            <button type="submit">This is not that day.</button>
+          </div>
         </form>
+        
 
     </body>
 </html>
